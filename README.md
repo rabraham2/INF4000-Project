@@ -56,7 +56,7 @@ This repository contains all the resources for the INF4000 course project. The f
 
 ```
 
-## Instructions to process the original data
+## Instructions
 
 Step 1: Load the Original Dataset
 File: poundsdata.xlsx
