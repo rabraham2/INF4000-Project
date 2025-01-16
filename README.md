@@ -44,10 +44,14 @@ This repository contains all the resources for the INF4000 course project. The f
 2. **Install Required R Packages**:
    Open **R** or **RStudio** and install the necessary packages:
    ```r
-   install.packages("dplyr")
-   install.packages("ggplot2")
-   install.packages("readr")
-   install.packages("tidyr")
+install.packages("readxl")
+install.packages("dplyr")
+install.packages("tidyr")
+install.packages("tidyverse")
+install.packages("scales")
+install.packages("forcats")
+install.packages("ggplot2")
+install.packages("gridExtra")
 
 ## Running the Scripts
 
