@@ -29,7 +29,7 @@ This repository contains all the resources for the INF4000 course project. The f
   - `ggplot2`
   - `readr`
   - `tidyr`
-  - Others (as needed, specified in your scripts)
+  - Others (as needed and specified in the code)
 
 ---
 
