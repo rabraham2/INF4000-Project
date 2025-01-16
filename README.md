@@ -60,6 +60,7 @@ This repository contains all the resources for the INF4000 course project. The f
 
 Step 1: Load the Original Dataset
 File: poundsdata.xlsx
+
 Tool Used: Microsoft Excel / Python / R
 Load the dataset to examine its structure, variable descriptions, and overall data quality.
 
