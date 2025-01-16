@@ -496,6 +496,7 @@ INF4000-Project/
 │  ├─ Month_on_Month_Sales_for_2020_vs_2019.png
 │  ├─ Sales_Change_across_Retail_Categories_2020_Vs_2019.png
 │  ├─ Visualization_of_Sales_by_Business_Type_across_Categories_2020_vs_2019.png
+│  ├─ Composite_Visualization_INF4000.png
 ├─ LICENSE
 ├─ README.md
 
