@@ -486,15 +486,16 @@ ggplot(retail_pound_data_month_on_month, aes(x = valnsat_time_period_month_num,
 
 ## Project Structure
 
-INF6027-Project/
+INF4000-Project/
 ├─ Code/
 │  ├─ data_r_code.R
 ├─ Data/
 │  ├─ Retail_Sales_Index_Pounds_Data.xlsx
 ├─ Results/
-│  ├─ Month-on-Month-Retail-Sales-2020-vs-2019.png
-│  ├─ Month-on-Month-Non-store-Retailing-Sales-2020-vs-2019.png
-│  ├─ Retail-Sales-Trends-Including-vs-Excluding-Automotive-Fuel-Sales.png
+│  ├─ Annual_Retail_Sales_from_2016_to_2023.png
+│  ├─ Month_on_Month_Sales_for_2020_vs_2019.png
+│  ├─ Sales_Change_across_Retail_Categories_2020_Vs_2019.png
+│  ├─ Visualization_of_Sales_by_Business_Type_across_Categories_2020_vs_2019.png
 ├─ LICENSE
 ├─ README.md
 
