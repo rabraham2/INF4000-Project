@@ -5,9 +5,10 @@ This repository contains all the resources for the INF4000 course project. The f
 1. [Overview](#overview)
 2. [System Requirements](#system-requirements)
 3. [Installation and Setup](#installation-and-setup)
-4. [Running the Scripts](#running-the-scripts)
-5. [Project Structure](#project-structure)
-6. [License](#license)
+4. [Instructions to process the original data](#instructions)
+5. [Running the Scripts](#running-the-scripts)
+6. [Project Structure](#project-structure)
+7. [License](#license)
 
 ## Overview
 - **Course**: INF4000
@@ -54,6 +55,45 @@ This repository contains all the resources for the INF4000 course project. The f
    install.packages("gridExtra")
 
 ```
+
+## Instructions to process the original data
+
+Step 1: Load the Original Dataset
+File: poundsdata.xlsx
+Tool Used: Microsoft Excel / Python / R
+Load the dataset to examine its structure, variable descriptions, and overall data quality.
+
+Step 2: Data Cleaning
+Remove Unnecessary Columns: Identify and drop columns not relevant to the study (e.g., metadata columns, codes, or identifiers that do not contribute to analysis).
+Keep only the variables related to retail sales indices and values expressed in pounds.
+Fix Column Names: Rename column headers to make them clear and consistent (e.g., "Month-Year" to "Date", "Monthly Retail Sales Percentages" to "Retail Sales Across Different Categories").
+Ensure no special characters or spaces in column names.
+Handle Missing Data: Review the dataset for missing or null values.
+Impute or replace missing values as appropriate (e.g., use the mean/median for numerical data, or drop rows/columns with excessive missing data).
+
+Step 3: Standardize Date Formats
+Convert all date-related columns into a uniform format (Month-Year as per the processed dataset requirements).
+Ensure proper alignment of time-series data for consistent analysis.
+
+Step 4: Filter Relevant Time Frame
+Restrict the data to the specific time frame required for the study (From 2016 to 2023).
+Remove rows that fall outside this time frame.
+
+Step 5: Aggregate Data
+If the original dataset contains granular data (weekly data), aggregate it into monthly averages/totals as required.
+Input: Weekly retail sales data.
+Output: Monthly average sales indices.
+
+Step 6: Create New Calculated Columns
+Derive new variables or indicators needed for analysis.
+Total Annual Retail Sales: Calculate annual retail sales value and weekly retail sales values for easy analysis.
+Index Adjustment: Normalize indices to the base year 2016.
+
+Step 7: Format and Export Processed Data
+Rearrange Columns: Ensure columns are ordered logically for analysis (based on Date, month-on-month Sales growth percentages and retail sales split across different retail business categories).
+Validate Data Consistency: Cross-check processed values against the original dataset to ensure no errors were introduced during processing.
+Save the Processed Dataset: Export the final dataset in .xlsx format.
+Final Output File Name: Retail_Sales_Index_Pounds_Data.xlsx
 
 ## Running the Scripts
 
