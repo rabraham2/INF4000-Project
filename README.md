@@ -14,6 +14,14 @@ This repository contains all the resources for the INF4000 course project. The f
 - **Course**: INF4000
 - **Goal**: Analysing retail sales performance in Great Britain.
 - **Aims and Objectives**: Understanding the pandemic's impact on retail is essential as it provides deeper insights into the shifts in consumer spending patterns and pinpoints the need for repositioning strategies. The composite visualisation discussed here employs the retail sales pounds dataset of Great Britain (1986 to 2024) from the Office for National Statistics (ONS). It presents four different charts that aim to uncover relevant insights, with each chart addressing a specific sub-question revolving around the retail landscape.
+
+The primary question guiding this composite visualisation is: How did COVID-19 impact retail sales across different categories in Great Britain? Understanding the pandemic's impact on retail is essential as it provides deeper insights into the shifts in consumer spending patterns and pinpoints the need for repositioning strategies.
+The four research questions for this study are as follows: 
+1. How did retail sales in Great Britain change from 2016 to 2023, and why was 2020 distinct?
+2. Which retail business experienced the biggest sales shifts in 2020 compared to 2019?
+3. Which product category has the most evident percentage change in sales, and why?
+4. How did monthly sales vary in 2020 vs 2019, and what do these changes reveal about downturns and recoveries?
+
 - **Methods**:
   - **Data Visualisation**
   - **ASSERT Framework**
