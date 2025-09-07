@@ -12,7 +12,7 @@ This repository contains all the resources for the INF4000 course project done i
 
 ## Overview
 - **Course**: INF4000
-- **Introduction**: The primary question guiding this composite visualisation is: How did COVID-19 impact retail sales across different categories in Great Britain? Understanding the pandemic's impact on retail is essential as it provides deeper insights into the shifts in consumer spending patterns and pinpoints the need for repositioning strategies. Effective data visualization is essential for transforming raw data into actionable insights, particularly in analysing sudden changes in consumer behaviour during the pandemic. Existing research points out that the uneven effects caused by lockdowns, social distancing, economic uncertainties and health concerns are the prime causes of these sudden shifts. 
+- **Introduction**: The primary question guiding this composite visualisation is: How did COVID-19 impact retail sales across different categories in Great Britain? Understanding the pandemic's impact on retail is essential as it provides deeper insights into the shifts in consumer spending patterns and pinpoints the need for repositioning strategies. Effective data visualisation is essential for transforming raw data into actionable insights, particularly in analysing sudden changes in consumer behaviour during the pandemic. Existing research points out that the uneven effects caused by lockdowns, social distancing, economic uncertainties and health concerns are the prime causes of these sudden shifts. 
 
 - **Goal**: Analysing retail sales performance in Great Britain.
 - **Aims and Objectives**: Understanding the pandemic's impact on retail is essential as it provides deeper insights into the shifts in consumer spending patterns and pinpoints the need for repositioning strategies. The composite visualisation discussed here employs the retail sales pounds dataset of Great Britain (1986 to 2024) from the Office for National Statistics (ONS). It presents four different charts that aim to uncover relevant insights, with each chart addressing a specific sub-question revolving around the retail landscape.
@@ -98,7 +98,7 @@ Output: Monthly average sales indices.
 Step 6: Create New Calculated Columns
 Derive new variables or indicators needed for analysis.
 Total Annual Retail Sales: Calculate annual retail sales value and weekly retail sales values for easy analysis.
-Index Adjustment: Normalize indices to the base year 2016.
+Index Adjustment: Normalise indices to the base year 2016.
 
 Step 7: Format and Export Processed Data
 Rearrange Columns: Ensure columns are ordered logically for analysis (based on Date, month-on-month Sales growth percentages and retail sales split across different retail business categories).
@@ -110,7 +110,7 @@ Final Output File Name: Retail_Sales_Index_Pounds_Data.xlsx
 
 ```r
 
-# Start of Data Visualization Coursework
+# Start of Data Visualisation Coursework
 
 install.packages("readxl")
 install.packages("dplyr")
@@ -131,13 +131,13 @@ library(ggplot2)
 library(gridExtra)
 
 
-# Reading the Retail Pounds Dataset used for Visualization
+# Reading the Retail Pounds Dataset used for Visualisation
 
 retail_pounds_data <- read_excel("Retail_Sales_Index_Pounds_Data.xlsx")
 view(retail_pounds_data)
 str(retail_pounds_data)
 
-# Plot1 - Visualization of Total Annual Retail Sales Data using Line Graph for the year 2016 to 2023
+# Plot1 - Visualisation of Total Annual Retail Sales Data using Line Graph for the year 2016 to 2023
 
 # Filter Retail Data from the Year 2016 to 2023 in the Dataset
 
@@ -170,7 +170,7 @@ ggplot(retail_pounds_data_filtered, aes(x = factor(valnsat_time_period_year),
   theme_minimal() +
   theme(legend.position = "right")
 
-# Plot 2 -  Visualization of Sales by Business Type across Categories using Faceted Pie Chart 2020 vs 2019
+# Plot 2 -  Visualisation of Sales by Business Type across Categories using Faceted Pie Chart 2020 vs 2019
 
 # Data Filtering and Calculation of Percentage Contribution of Large and Small Businesses across each Sub-Categories
 
@@ -275,7 +275,7 @@ food_stores_retailing <- data.frame(
 food_stores_retailing <- food_stores_retailing %>%
   gather(key = "business_type", value = "sales", -year)
 
-# Normalizing sales to percentages for each year under consideration
+# Normalising sales to percentages for each year under consideration
 
 food_stores_retailing <- food_stores_retailing %>%
   group_by(year) %>%
@@ -315,7 +315,7 @@ non_food_stores_retailing <- data.frame(
 non_food_stores_retailing <- non_food_stores_retailing %>%
   gather(key = "business_type", value = "sales", -year)
 
-# Normalizing sales to percentages for each year under consideration
+# Normalising sales to percentages for each year under consideration
 
 non_food_stores_retailing <- non_food_stores_retailing %>%
   group_by(year) %>%
@@ -350,12 +350,12 @@ non_store_retailing <- data.frame(
                        total_annual_sales_non_store_retailing$total_annual_sales_small_businesses_non_store_retailing[total_annual_sales_non_store_retailing$valnsat_time_period_year == 2019])
 )
 
-# Converting the data into standard format for ggplot
+# Converting the data into a standard format for ggplot
 
 non_store_retailing <- non_store_retailing %>%
   gather(key = "business_type", value = "sales", -year)
 
-# Normalizing sales to percentages for each year under consideration
+# Normalising sales to percentages for each year under consideration
 
 non_store_retailing <- non_store_retailing %>%
   group_by(year) %>%
@@ -380,7 +380,7 @@ non_store_retailing_pie_chart <- ggplot(non_store_retailing, aes(x = "", y = sal
   geom_text(aes(label = paste0(round(sales_percentage, 1), "%")), position = position_stack(vjust = 0.5), color = "white", size = 2.5) +
   theme(legend.position = "right", plot.title = element_text(hjust = 0.5, size = 12), legend.text = element_text(size = 9),legend.title = element_text(size = 11))
 
-# Combining all pie charts into one single visualization in ggplot
+# Combining all pie charts into one single visualisation in ggplot
 
 gridExtra::grid.arrange(
   food_stores_retailing_pie_chart,
@@ -389,7 +389,7 @@ gridExtra::grid.arrange(
   ncol = 1
 )
 
-# Plot 3 - Visualization of Sales Change in Percentage across Retail Business Categories using Horizontal Bar Chart 2020 vs 2019
+# Plot 3 - Visualisation of Sales Change in Percentage across Retail Business Categories using Horizontal Bar Chart 2020 vs 2019
 
 retail_pounds_data_sales_change_filtered <- retail_pounds_data %>% filter(valnsat_time_period_year >= 2019 & valnsat_time_period_year <= 2020) %>% select(
   valnsat_time_period_year,
@@ -469,7 +469,7 @@ ggplot(retail_pounds_data_change_percentage, aes(x = percentage_change, y = cate
     plot.title = element_text(hjust = 0.5, size = 14)
   )
 
-# Plot 4 -  Visualization of Monthly Sales using Clustered Bar Chart 2020 vs 2019
+# Plot 4 -  Visualisation of Monthly Sales using Clustered Bar Chart 2020 vs 2019
 
 # Data Filtering based on Month
 
@@ -483,7 +483,7 @@ retail_pound_data_month_on_month <- retail_pounds_data %>% filter(valnsat_time_p
     valnsat_month_as_a_percentage_of_total
   )
 
-# Converting the 'valnsat_time_period_month' to a numerals months in order
+# Converting the 'valnsat_time_period_month' to a numerical month in order
 
 valnsat_month_in_numerals <- c(
   "JAN" = "01",
@@ -559,7 +559,7 @@ Copyright (c) 2025 Roshin Abraham
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
+in the Software without restriction, including, without limitation, the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
